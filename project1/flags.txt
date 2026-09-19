@@ -5,3 +5,9 @@ CY2550_FLAG_LEVEL2{vh0ayuchx0osqvceptv5g2ys8hpghkxr}
 CY2550_FLAG_LEVEL3{9repaacsl0muv4kzdh5jmhq2wl8613sa}
 
 CY2550_FLAG_LEVEL4{mtl97hk3wze8cjg54b20jxlb0ry30mus}
+
+CY2550_FLAG_LEVEL5{mrfal85l3o76ncptko7o6or0x1c5r9s1}
+
+CY2550_FLAG_LEVEL6{gj688jyklk4hbv74sewkhozu0fmem1e0}
+
+CY2550_FLAG_LEVEL7{oe3n7a8im86jdz4310t2reznj19mz0sr}
