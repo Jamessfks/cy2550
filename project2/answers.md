@@ -117,6 +117,10 @@ Your GPG key is RSA-4096, while your SSH key is Ed25519, which is roughly a 256-
 Because  Ed25519 is generally much faster than RSA at key generation and signing. Also, the Ed25519 has randomness and avoids the risky prime-number generation flaws that affect RSA.
 
 
+7.1
+prompt: "Write me a Python function that encrypts a file with AES"
+
+Model: Claude Opus 5.5 High
 
 
 7.2 Critique the AI Code – 8 Points
