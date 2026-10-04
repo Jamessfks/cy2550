@@ -29,4 +29,4 @@ Multi-tap phone cipher: decode
 Atbash Cipher: decode
 Such as: (A to Z, B to Y)
 
-Final plaintext: NOT ALL TREASURE IS SILVER AND GOLD MATE
+Final plaintext: NOT ALL TREASURES SILVER AND GOLD MATE
