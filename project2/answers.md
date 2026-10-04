@@ -83,7 +83,7 @@ pubkey enc packet: version 3, algo 1, keyid 0998100E9441EE2C
 	length: 90
 	mdc_method: 2
 So pubkey enc packet contains: A random session key and a RSA public key.
-encrypted data packet contains: my actual message, encrypted with the session key.
+Encrypted data packet contains: my actual message,encrypted with the session key using a symmetric cipher.
 
 
 
@@ -114,7 +114,7 @@ Part 5: SSH Keys – 5 Points
 
 Your GPG key is RSA-4096, while your SSH key is Ed25519, which is roughly a 256-bit elliptic curve key. Explain in two sentences why the much smaller Ed25519 key is not necessarily the weaker key.
 
-Because  Ed25519 is generally much faster than RSA at key generation and signing. Also, the Ed25519 has randomness and avoids the risky prime-number generation flaws that affect RSA.
+Because  Ed25519 is generally much faster than RSA at key generation and signing. Also, the Ed25519 has randomness and avoids the risky prime-number generation flaws that affect RSA. Lastly, Elliptic curves, the one Ed25519 uses, have no such shortcut, so a 256-bit Ed25519 key gives about 128-bit security.
 
 
 7.1
@@ -137,7 +137,6 @@ I added the filename as associated data. The ciphertext is tied to its filename.
 Then I padded the plaintext to a multiple of 1024 bytes, with the real length stored inside the encryption, which fixes Defect 2, the length leak. 
 Lastly, derived the key from a password using PBKDF2 with a random salt. Thus ,the user no longer has to store a raw key file. Eventually, fixes defect 3.
 
-1.1 Encrypt and Decrypt a File – 5 Points
 
 Basically, -pbkdf2 tells OpenSSL to turn the passphrase into a key and IV(Initialization Vector) using PBKDF2 (Password-Based Key Derivation Function 2).
 
@@ -271,3 +270,9 @@ Lastly, unsafe key handling is left to the user. The code creates a raw key with
 I added the filename as associated data. The ciphertext is tied to its filename. Therefore, the attacker can not swap in a different encrypted file. This fixes Defect 1.
 Then I padded the plaintext to a multiple of 1024 bytes, with the real length stored inside the encryption, which fixes Defect 2, the length leak. 
 Lastly, derived the key from a password using PBKDF2 with a random salt. Thus ,the user no longer has to store a raw key file. Eventually, fixes defect 3
+
+Demonstration on my VM:
+```
+$ python3 -c "import fixed_crypto as f; ..." && diff secret.txt demo_out.txt && echo "ROUND TRIP OK"
+ROUND TRIP OK
+```
