@@ -15,6 +15,7 @@ omar.nelson:b818e4e25477665569397bb88368898a:r0m@n1!
 mia.young:f11f9c15b5c1440fddbabe7d2c0d5df6:911turbo
 yclark:21ab845256efccd602598345da09a7d3:rettirc
 remy.anderson:a976c0d05c6da4ae3de793cbb6512c38:VALENTINA01
+vera.taylor:4b2f9212a874260c736e3de0947f1c43:velocity8232
 glen.rogers:76d7fea9b24c6ea2d04f53743dc8b521:45452263
 maya.jones:301168523b65d618b7b7b31cf8d0048e:374353
 brett.thompson:ee66ead8491eb03c80879be36f76ba5f:Xoaq44
